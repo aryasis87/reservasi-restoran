@@ -4,10 +4,10 @@ import { Inter, Playfair_Display } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-playfair', display: 'swap' });
 
-const __jsonld = {"@context":"https://schema.org","@type":"Restaurant","name":"Saung Rasa","description":"Reservasi meja restoran online","url":"https://reservasi-restoran.vercel.app","areaServed":"ID"};
+const __jsonld = {"@context":"https://schema.org","@type":"Restaurant","name":"Saung Rasa","description":"Reservasi meja restoran online","url":"https://restoran.pintuweb.com","areaServed":"ID"};
 
 export const metadata = {
-  metadataBase: new URL("https://reservasi-restoran.vercel.app"),
+  metadataBase: new URL("https://restoran.pintuweb.com"),
   title: "Saung Rasa — Reservasi Meja Restoran Online",
   description: "Reservasi meja restoran online lewat denah interaktif. Pilih meja favoritmu, tentukan waktu, dan datang tanpa menunggu.",
   applicationName: "Saung Rasa",
@@ -15,11 +15,11 @@ export const metadata = {
   authors: [{ name: "Saung Rasa" }],
   creator: "Saung Rasa",
   publisher: "Saung Rasa",
-  alternates: { canonical: "https://reservasi-restoran.vercel.app" },
+  alternates: { canonical: "https://restoran.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://reservasi-restoran.vercel.app",
+    url: "https://restoran.pintuweb.com",
     siteName: "Saung Rasa",
     title: "Saung Rasa — Reservasi Meja Restoran Online",
     description: "Reservasi meja restoran online lewat denah interaktif. Pilih meja favoritmu, tentukan waktu, dan datang tanpa menunggu.",
