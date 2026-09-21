@@ -1,5 +1,5 @@
 export default function sitemap() {
   return [
-    { url: "https://restoran.pintuweb.com", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
+    { url: "https://reservasi-restoran-gilt.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
   ];
 }
