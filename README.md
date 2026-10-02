@@ -1,20 +1,24 @@
-# Saung Rasa — Reservasi Meja Restoran Online
+# Pawon Lirih — Pesan meja lewat denah
 
-Reservasi meja restoran online lewat denah interaktif. Pilih meja favoritmu, tentukan waktu, dan datang tanpa menunggu.
+Restoran masakan rumahan Jawa (fiktif) di Yogyakarta. Paradigma **denah meja**: pilih hari, jam, dan jumlah tamu, lalu klik meja yang masih kosong langsung di denah.
 
 **Demo live:** https://reservasi-restoran-gilt.vercel.app
 
-![Tangkapan layar Saung Rasa](public/og.jpg)
+![Tangkapan layar](public/og.jpg)
 
-> Aplikasi reservasi contoh. Data tersimpan di browser (localStorage), tanpa backend.
+> Purwarupa desain. Nama usaha, data, dan harga fiktif. Tidak ada pembayaran dan tidak ada yang dikirim ke server: pemesanan disimpan di `localStorage` peramban. Tanggal dan jam dihitung dalam WIB di peramban; keterisian contoh dibuat stabil per tanggal.
 
-## Konsep
+## Fitur
 
-Paradigma **denah meja**: pilih tanggal, jam, dan jumlah tamu, lalu klik meja yang masih kosong langsung di denah restoran.
+- Kartu 10 hari ke depan dalam WIB; Senin tutup, jam yang tinggal kurang dari 30 menit tidak bisa dipesan.
+- Meja punya zona (dekat jendela, pojok tenang, dekat dapur) dan kapasitas; meja yang terlalu kecil otomatis nonaktif.
+- `/menu` — menu Jawa lengkap dengan tanda pedas, vegetarian, kacang.
+- `/rombongan` — 10–30 orang: pilih paket, perkiraan biaya dengan pajak restoran 10% dan uang muka 30%.
+- `/reservasi` — reservasi saya: akan datang & sudah lewat, batalkan.
 
 ## Halaman
 
-`/`
+`/` · `/menu` · `/reservasi` · `/rombongan`
 
 ## Teknologi
 
@@ -22,8 +26,8 @@ Paradigma **denah meja**: pilih tanggal, jam, dan jumlah tamu, lalu klik meja ya
 - Tailwind CSS v4
 - JavaScript
 - Framer Motion, Lucide (ikon)
-- Font: Inter, Playfair Display (next/font)
-- SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
+- Font: Playfair Display, Inter (next/font)
+- SEO: metadata per halaman, Open Graph, sitemap.xml, dan robots.txt
 
 ## Menjalankan secara lokal
 

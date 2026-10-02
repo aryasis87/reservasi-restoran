@@ -1,5 +1,6 @@
+const URL = 'https://reservasi-restoran-gilt.vercel.app';
+
 export default function sitemap() {
-  return [
-    { url: "https://reservasi-restoran-gilt.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-  ];
+  const now = new Date();
+  return ['', '/menu', '/rombongan'].map((p) => ({ url: URL + p, lastModified: now, changeFrequency: 'monthly', priority: p ? 0.7 : 1 }));
 }

@@ -13,7 +13,7 @@ export default function FloorMap({ tables, bookedIds, guests, selectedId, onSele
     <div>
       <div className="relative mx-auto aspect-[16/11] w-full overflow-hidden rounded-2xl border border-stone-200 bg-[repeating-linear-gradient(45deg,#f5efe6,#f5efe6_14px,#f2ebe0_14px,#f2ebe0_28px)] shadow-inner">
         {/* Label area */}
-        <span className="absolute left-3 top-3 rounded-md bg-white/70 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-stone-400">
+        <span className="absolute left-3 top-3 rounded-md bg-white/70 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-stone-600">
           Pintu Masuk
         </span>
 
@@ -29,7 +29,7 @@ export default function FloorMap({ tables, bookedIds, guests, selectedId, onSele
             ? 'border-stone-300 bg-stone-200 text-stone-400 cursor-not-allowed'
             : tooSmall
             ? 'border-stone-200 bg-white/60 text-stone-300 cursor-not-allowed'
-            : 'border-emerald-500 bg-white text-emerald-700 hover:bg-emerald-50 hover:scale-105 cursor-pointer';
+            : 'border-emerald-600 bg-white text-emerald-800 hover:bg-emerald-50 hover:scale-105 cursor-pointer';
 
           return (
             <button
@@ -38,7 +38,7 @@ export default function FloorMap({ tables, bookedIds, guests, selectedId, onSele
               disabled={disabled}
               onClick={() => onSelect(t.id)}
               style={{ left: `${t.x}%`, top: `${t.y}%`, transform: 'translate(-50%, -50%)' }}
-              aria-label={`Meja ${t.id}, ${t.seats} kursi${booked ? ', sudah dipesan' : tooSmall ? ', terlalu kecil' : ', tersedia'}`}
+              aria-label={`Meja ${t.id}, ${t.seats} kursi, ${t.zona}${booked ? ', sudah dipesan' : tooSmall ? ', kursi kurang' : ', tersedia'}`}
               aria-pressed={selected}
               className={`absolute flex flex-col items-center justify-center border-2 text-center transition-all duration-200 ${SIZE[t.shape]} ${cls}`}
             >
@@ -52,8 +52,8 @@ export default function FloorMap({ tables, bookedIds, guests, selectedId, onSele
       </div>
 
       {/* Legenda */}
-      <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-stone-500">
-        <Legend className="border-emerald-500 bg-white" label="Tersedia" />
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-stone-700">
+        <Legend className="border-emerald-600 bg-white" label="Tersedia" />
         <Legend className="border-amber-600 bg-amber-600" label="Pilihanmu" />
         <Legend className="border-stone-300 bg-stone-200" label="Terisi" />
         <Legend className="border-stone-200 bg-white/60" label="Kursi kurang" />
@@ -65,7 +65,7 @@ export default function FloorMap({ tables, bookedIds, guests, selectedId, onSele
 function Legend({ className, label }) {
   return (
     <span className="flex items-center gap-1.5">
-      <span className={`h-4 w-4 rounded border-2 ${className}`} /> {label}
+      <span className={`h-4 w-4 rounded border-2 ${className}`} aria-hidden="true" /> {label}
     </span>
   );
 }

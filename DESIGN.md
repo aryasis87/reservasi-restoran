@@ -1,9 +1,9 @@
-# Saung Rasa — Design System (Reservasi Restoran)
+# Pawon Lirih — Design System (Reservasi Restoran)
 
 > Concept: **fine-dining editorial** — a digital à-la-carte menu meets a maître d's table planner. Warm, tactile, appetizing. Platform: responsive web (desktop-first). Bahasa: Indonesia.
 
 ## Brand voice
-Hangat, ramah, sedikit elegan. Seperti host restoran yang menyambut. Contoh: "Pilih meja favoritmu", "Sampai jumpa di Saung Rasa".
+Hangat, ramah, sedikit elegan. Seperti host restoran yang menyambut. Contoh: "Pilih meja favoritmu", "Sampai jumpa di Pawon Lirih".
 
 ## Color tokens
 | Token | Hex | Pakai |
