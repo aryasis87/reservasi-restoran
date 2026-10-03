@@ -40,4 +40,4 @@ Buka http://localhost:3000. Untuk build produksi: `npm run build` lalu `npm star
 
 ---
 
-Bagian dari koleksi 5 aplikasi reservasi di [PortalReservasi](https://portal-reservasi-nu.vercel.app). Dibuat oleh [PintuWeb](https://pintuweb.com), jasa pembuatan website.
+Bagian dari koleksi 5 aplikasi reservasi di [PortalReservasi](https://www.pintuweb.com/website-reservasi). Dibuat oleh [PintuWeb](https://www.pintuweb.com), jasa pembuatan website.
